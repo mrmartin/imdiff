@@ -34,6 +34,13 @@ np.save('features_pool5.npy', feature_matrix)
 image_distances=scipy.spatial.distance.pdist(feature_matrix, 'cityblock')#also 'euclidean'
 np.save('image_distances_pool5.npy', image_distances)
 
+#here, you can create various metrics by varying the parameters above. You can change the extracted layer, or the distance metric
+#These are the options I tested:
+#image_distances_fc6_manhattan.npy
+#image_distances_fc6.npy
+#image_distances_norm1.npy
+#image_distances_pool5.npy
+
 np.set_printoptions(precision=3)
 print(image_distances)
 print(scipy.spatial.distance.squareform(image_distances))

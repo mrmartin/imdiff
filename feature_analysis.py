@@ -5,6 +5,7 @@ import scipy.spatial
 
 lines = [line.strip() for line in open('extracted_images.txt')]
 
+#change this to whichever feature you extracted
 image_distances = np.load('image_distances_pool5.npy')
 
 image_distances=scipy.spatial.distance.squareform(image_distances);
